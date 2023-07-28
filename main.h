@@ -1,4 +1,4 @@
-#ifndef MAIN_H
+#ifndef MAIN_iH
 #define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
@@ -40,7 +40,7 @@ struct fmt
 
 typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *i,
+int handle_print(const char *fmt, int *a,
 		va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
@@ -83,10 +83,10 @@ int print_pointer(va_list types, char buffer[],
 
 /* Funciotns to handle other specifiers */
 
-int get_flags(const char *format, int *i);
-int get_width(const char *format, int *i, va_list list);
+int get_flags(const char *format, int *a);
+int get_width(const char *format, int *a, va_list list);
 int get_precision(const char *format, int *i, va_list list);
-int get_size(const char *format, int *i);
+int get_size(const char *format, int *a);
 
 /*Function to print string in reverse*/
 
